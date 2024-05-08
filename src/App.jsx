@@ -3,7 +3,7 @@ import Company from "./page/company";
 
 function App() {
   return (
-    <div>
+    <div className="flex px-52 my-52  justify-center">
       <Company />
       <Signup />
     </div>
