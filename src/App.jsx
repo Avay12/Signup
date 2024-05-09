@@ -1,9 +1,9 @@
-import Signup from "./page/Signup";
-import Company from "./page/company";
+import Signup from './page/Signup';
+import Company from './page/company';
 
 function App() {
   return (
-    <div className="flex px-52 my-52  justify-center">
+    <div className="my-52 flex h-[32rem] justify-center px-52">
       <Company />
       <Signup />
     </div>

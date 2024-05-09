@@ -1,30 +1,30 @@
-import { useState } from "react";
-import Checkbox from "@mui/material/Checkbox";
-import Header from "../components/Header";
-import Sites from "../components/Sites";
-import { grey } from "@mui/material/colors";
+import { useState } from 'react';
+import Checkbox from '@mui/material/Checkbox';
+import Header from '../components/Header';
+import Sites from '../components/Sites';
+import { grey } from '@mui/material/colors';
 
 const accountSignup = [
   {
     id: 1,
-    site: "google",
-    src: "https://cdn.icon-icons.com/icons2/2642/PNG/512/google_logo_g_logo_icon_159348.png",
+    site: 'google',
+    src: 'https://cdn.icon-icons.com/icons2/2642/PNG/512/google_logo_g_logo_icon_159348.png',
   },
   {
     id: 1,
-    site: "facebook",
-    src: "https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-Blue-Logo.wine.svg",
+    site: 'facebook',
+    src: 'https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-Blue-Logo.wine.svg',
   },
   {
     id: 3,
-    site: "linden",
-    src: "https://t3.ftcdn.net/jpg/04/37/88/86/360_F_437888641_XrjjuAwATXWNx10jQurCDaXXJnobhDi4.jpg",
+    site: 'linden',
+    src: 'https://t3.ftcdn.net/jpg/04/37/88/86/360_F_437888641_XrjjuAwATXWNx10jQurCDaXXJnobhDi4.jpg',
   },
 ];
 
 export default function Signup() {
-  const [otp, setOtp] = useState("");
-  const [password, setPassword] = useState("");
+  const [otp, setOtp] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
     <div>
@@ -34,7 +34,7 @@ export default function Signup() {
           <div className="flex flex-col space-y-6">
             <label>
               <input
-                className="placeholder-shown:border-gray-500 pl-4 pr-36 py-2 border-2 border-gray-50"
+                className="border-2 border-gray-50 py-2 pl-4 pr-24 placeholder-shown:border-gray-500"
                 type="text"
                 id="otp"
                 onChange={(e) => setOtp(e.target.value)}
@@ -44,7 +44,7 @@ export default function Signup() {
             </label>
             <label>
               <input
-                className="placeholder-shown:border-gray-500 ... pl-4 pr-36  py-2 border-2 border-grey-50"
+                className="... border-grey-50 border-2 py-2  pl-4 pr-24 placeholder-shown:border-gray-500"
                 type="password"
                 id="password"
                 onChange={(e) => setPassword(e.target.value)}
@@ -54,7 +54,7 @@ export default function Signup() {
             </label>
             <label>
               <input
-                className="placeholder-shown:border-gray-500 ... pl-4  pr-36 py-2 border-2 border-grey-50"
+                className="... border-grey-50 border-2  py-2 pl-4 pr-24 placeholder-shown:border-gray-500"
                 type="Confirm"
                 id="email"
                 onChange={(e) => setPassword(e.target.value)}
@@ -63,12 +63,6 @@ export default function Signup() {
               />
             </label>
             <label>
-              {/* <input
-                type="checkbox"
-                name="option"
-                value="1"
-                className="bg-slate-grey-500"
-              /> */}
               <Checkbox
                 sx={{
                   color: grey[800],
@@ -82,16 +76,16 @@ export default function Signup() {
           </div>
 
           <div>
-            <button className="px-32 py-2 bg-blue-700 w-100 rounded-full font-bold text-white">
+            <button className="w-100 rounded-full bg-blue-700 px-32 py-2 font-bold text-white">
               SignUp
             </button>
           </div>
 
           <div>
-            <p className="text-center font-bold text-black font sans-serif">
+            <p className="font sans-serif text-center font-bold text-black">
               Or Signin with
             </p>
-            <ul className="flex space-x-2 justify-center">
+            <ul className="flex justify-center space-x-2">
               {accountSignup.map((site) => (
                 <Sites site={site.site} key={site.id} img={site.src} />
               ))}
